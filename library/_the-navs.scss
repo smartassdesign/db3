@@ -1,0 +1,39 @@
+nav.navbar {
+
+	padding: 0;
+	position: relative;
+
+	ul.list-inline {
+		margin-bottom: 0;
+	}
+
+	.list-inline-item:not(:last-child) {
+		margin-right: 10px;
+	}
+	
+	a.nav-link {
+		font-size: 20px;
+		font-weight: 500;
+		color: #fff;
+		text-transform: uppercase;
+		line-height: 70px;
+	}	
+
+	a.navbar-brand {
+		text-indent: -9999px;
+		width: 128px;
+		height: 126px;
+		position: absolute;
+		left: 30px;
+		top: -32px;
+		background-image: url("../img/db-logo-10.png");
+	}
+
+
+	&.bg-inverse {
+		background-color: $black;
+		color: $white;
+	}
+
+
+}

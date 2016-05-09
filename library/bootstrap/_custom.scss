@@ -32,11 +32,21 @@ $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #fa0d1c !default;
-$brand-success:             #73b84d !default;
-$brand-info:                #ffd316 !default;
-$brand-warning:             #f7941e !default;
-$brand-danger:              #d9534f !default;
+$brand-primary:             #fa0d1c; //red
+$brand-success:             #73b84d; //green
+$brand-info:                #fff; //white
+$brand-warning:             #f7941e; //yellow
+$brand-danger:              #f7941e; //orange
+
+$red:                       $brand-primary;
+$yellow:                    $brand-success; 
+$orange:                    $brand-warning;  
+$blue:                      #00b2d9;
+$green:                     $brand-success;
+
+
+$black:                     #000;
+$white:                     #fff;
 
 
 // Options
@@ -44,7 +54,7 @@ $brand-danger:              #d9534f !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-flex:               false !default;
-$enable-rounded:            true !default;
+$enable-rounded:            false; // !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        false !default;

@@ -1,0 +1,66 @@
+.masthead {
+	width: 100%;
+    // height: 80vh;
+
+}
+
+
+.slick-slide {
+	position: relative;
+}
+
+.db-slider-img {
+    width: 100%;
+    height: 70vh;
+    background-size: cover!important;
+    background-position: center center!important;
+}    
+
+.db-slider-info {
+	position: absolute;
+	left: 5rem;
+	bottom: 4rem;
+	width: 39%;
+
+	a {
+		color: $white;
+	}
+
+	h2 {
+		font-size: 60px;
+		line-height: 1;
+		font-weight: 400;
+	}
+
+}
+
+
+.qa2nav {
+
+	position: absolute;
+	width: 100%;
+	top: calc(40% - 28px);
+
+	button {
+		font-size: 50px;
+		background: transparent;
+		border: none;
+		margin: 0;
+		padding: 0;
+		line-height: 1;
+	}
+
+	.sd-prev, .sd-next {
+		position: absolute;
+	}
+
+	.sd-prev {
+		left: 20px;
+	}
+
+	.sd-next {
+		right: 20px;
+	}
+
+
+}

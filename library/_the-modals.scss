@@ -1,0 +1,116 @@
+
+
+.modal {
+
+	h3 {
+	    text-transform: uppercase;
+	    letter-spacing: .5px;
+	    font-size: 12px;
+	    font-weight: 700;
+	    line-height: 1.5;
+	}
+
+	p {
+		font-family: $playfair;
+		// font-family: $mercury;
+		font-weight: 400;
+		letter-spacing: 0;
+		text-transform: none;
+		font-size: 18px;
+	}
+
+	li {
+		font-family: $playfair;
+		font-weight: 400;
+		// margin-left: 15px;
+		position: relative;
+		padding-bottom: 5px;
+    	margin-bottom: 5px;
+    	font-style: italic;
+    	text-align: center;
+
+		&:before {
+			// content: "+";
+			// position: absolute;
+			// left: -15px;
+			top: calc(50% - 7px);
+			font-family: $gotham;
+			font-size: 85%;
+			font-style: normal;
+			line-height: 1;
+			opacity: .77;
+
+		}
+	}
+
+}
+
+
+
+
+
+.modal-header {
+	// background: $brand-primary;
+	border-bottom: none;
+	background: #fff;
+	text-align: center;
+	// padding: 20px 20px 0 20px;
+}
+
+.modal-title {
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 18px;
+
+}
+
+.home {
+	.btn + .btn {
+		margin-left: 20px;
+	}
+
+	.modal-body {
+		color: #333;
+		// padding: 20px;
+		// background: $brand-primary;
+
+		// a {
+		// 	font-weight: 600;
+		// }
+
+		// ul {
+		// 	padding-left: 20px;
+		// }
+	}
+}
+
+
+
+
+// VERTICAL MODAL TEST #3
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    // height:inherit;
+    // /* To center horizontally */
+    // margin: 0 auto;
+    // max-width: 95%;
+    margin: 0 auto;
+    pointer-events:all;
+    border: 15px solid $brand-primary;
+    border-radius: 0;
+}

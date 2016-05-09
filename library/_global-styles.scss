@@ -1,23 +1,31 @@
-	.site-content {
-		padding: 0;
-		background: transparent;
+// THE TYPE
 
-		.pg-aligner {
-		  display: flex;
-		  align-items: center;
-		  justify-content: center;
-		  height: 100vh;// calc(100vh - 71px);
-		}
 
-		.aligner-item {
-		  // text-align: center;
-		}
+p {
+	font-weight: 700;
+	letter-spacing: 3px;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: $font-family-sans-serif;
+	font-weight: bold;
+	line-height: normal;
+	margin: 0;
+	font-size: 21px;
+	-webkit-font-smoothing: antialiased;
+	&:first-child {
+		margin-bottom: 0;
+	}
+
+	&.light {
+		font-weight: 300;
+	}
+	// font-family: $font-family-serif;
 }
 
 
-.home {
-	color: #fff;
-}
 
 h1 {
 	font-weight: 400;
@@ -25,9 +33,22 @@ h1 {
 }
 
 
-.trailer {
-	margin-bottom: 20px;
+.blockcap {
+	font-family: $font-family-sans-serif;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	font-weight: 700;
+	font-style: normal;
 }
+
+
+
+
+
+
+// THE LINKS
 
 .btn-primary {
 	cursor: pointer;
@@ -39,6 +60,10 @@ h1 {
 
 a, .btn {
 	cursor: pointer;
+
+	&:focus, &:hover {
+		text-decoration: none;
+	}
 }
 
 .regilink a {
@@ -55,228 +80,112 @@ a, .btn {
 }
 
 
-.modal {
+.btn-info-outline {
+	
+	transition: all .4s;
+	
+	&:hover {
+		color: $black;
+	}
+}
 
-	h3 {
-	    text-transform: uppercase;
-	    letter-spacing: .5px;
-	    font-size: 12px;
-	    font-weight: 700;
-	    line-height: 1.5;
+
+
+
+
+
+// THE MODULES
+
+
+// THE ARTICLE TEASERS
+
+.article-teaser {
+
+	position: relative;
+
+
+	a {
+		color: #fff;
 	}
 
-	p {
-		font-family: $playfair;
-		// font-family: $mercury;
-		font-weight: 400;
-		letter-spacing: 0;
-		text-transform: none;
-		font-size: 18px;
-	}
 
-	li {
-		font-family: $playfair;
-		font-weight: 400;
-		// margin-left: 15px;
-		position: relative;
-		padding-bottom: 5px;
-    	margin-bottom: 5px;
-    	font-style: italic;
-    	text-align: center;
 
-		&:before {
-			// content: "+";
-			// position: absolute;
-			// left: -15px;
-			top: calc(50% - 7px);
-			font-family: $gotham;
-			font-size: 85%;
-			font-style: normal;
-			line-height: 1;
-			opacity: .77;
+	h2, h3 {
+		bottom: 0;
+		margin: 0;
+		width: 100%;
+		max-height: 100%;
+		overflow: hidden;		
 
+		a {
+			background-image: url("../img/lines.gif");
+			background-color: rgba(0,0,0,0.4);
+			padding: 2px 2% 4px;
+			display: block;
+			text-shadow: 1px 2px 1px rgba(0,0,0,0.4);			
 		}
 	}
 
-}
-
-
-
-
-#modalSlumber {
-
-	.modal-header {
-		padding-bottom: 0;
+	.category, h2, h3 {
+		position: absolute;
 	}
 
-	ul li a {
-		cursor: pointer;
-	}
-
-
-	p.lede {
-		font-size: 24px;
-		font-weight: 200;
-	}
-	// p.collapse, p.collapse.in {
-	// 	border-top: 4px solid #000;
-	//     text-align: left;
-	//     font-size: 18px;
-	//     font-style: normal;
-	//     font-weight: 300;
-	//     margin-top: 10px;
-	//     line-height: 1.5em;
-	// }
-
 }
 
 
 
 
-p {
-	font-weight: 700;
-	letter-spacing: 3px;
-	font-size: 22px;
-	text-transform: uppercase;
-}
 
-h2 {
-	font-family: $font-family-sans-serif;
-	font-weight: 700;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	line-height: 1;
-	margin-bottom: .75em;
-	&:first-child {
-		margin-bottom: 0;
-	}
+	.category {
+		font-size: 12px;
+		font-weight: 600;
+		padding: 4px 8px;
+		right: 0;
+		text-transform: uppercase;
+		top: 0;	
+		background-color: $red;
 
-	&.light {
-		font-weight: 300;
-	}
-	// font-family: $font-family-serif;
-}
+		&.arts {
+			background-color: $blue;	
+			color: $white;
+		}
 
-// h1 {
-// 	font-family: "clarendon-text-pro",sans-serif;
-// 	// font-family: 'Gotham SSm A', 'Gotham SSm B';
-// 	// font-weight: 700;
-// }
+		&.community {
+			background-color: $yellow;	
+			color: $black;
+		}		
 
+		&.visit {
+			background-color: $orange;
+			color: $black;
+		}
 
-.home {
-	background: #333;
-}
+		&.work {
+			background-color: $green;
+			color: $black;
+		}
 
-
-
-
-.blockcap {
-	font-family: $font-family-sans-serif;
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 12px;
-	font-weight: 700;
-	font-style: normal;
-}
-
-
-
-.modal-header {
-	// background: $brand-primary;
-	border-bottom: none;
-	background: #fff;
-	text-align: center;
-	// padding: 20px 20px 0 20px;
-}
-
-.modal-title {
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 18px;
-
-}
-
-.home {
-	.btn + .btn {
-		margin-left: 20px;
-	}
-
-	.modal-body {
-		color: #333;
-		// padding: 20px;
-		// background: $brand-primary;
-
-		// a {
-		// 	font-weight: 600;
-		// }
-
-		// ul {
-		// 	padding-left: 20px;
-		// }
-	}
-}
+		&.learn {
+			background-color: $red;	
+			color: $white;
+		}				
+	}	
 
 
 
 
-// VERTICAL MODAL TEST #3
-
-.vertical-alignment-helper {
-    display:table;
-    height: 100%;
-    width: 100%;
-    pointer-events:none;
-}
-.vertical-align-center {
-    /* To center vertically */
-    display: table-cell;
-    vertical-align: middle;
-    pointer-events:none;
-}
-.modal-content {
-    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
-    width:inherit;
-    // height:inherit;
-    // /* To center horizontally */
-    // margin: 0 auto;
-    // max-width: 95%;
-    margin: 0 auto;
-    pointer-events:all;
-    border: 15px solid $brand-primary;
-    border-radius: 0;
-}
 
 
 
-::selection { color: #fff;
-  background-color: gold;
-}
-::-moz-selection { color: #fff;
-  background-color: gold;
-}
-
-
-
-:focus {
-	outline: 0!important;
-	// outline: -webkit-focus-ring-color auto 5px;
-}
-
-
-
-
-// ALERTS
+// THE ALERTS
 
 .alert {
 	border-radius: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;	
-    margin: 0!important;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;	
+	margin: 0!important;
 }
 
 .alert-danger {
@@ -294,5 +203,28 @@ h2 {
 	text-shadow: 0;
 	color: #fff;
 	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+// THE DETAILS
+
+::selection { color: #fff;
+  background-color: gold;
+}
+::-moz-selection { color: #fff;
+  background-color: gold;
+}
+
+:focus {
+	outline: 0!important;
+	// outline: -webkit-focus-ring-color auto 5px;
 }
 
