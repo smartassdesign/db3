@@ -1,0 +1,133 @@
+	
+
+
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="smartassdesign">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>DB3</title>
+
+	<link href="assets/css/style-master.css" rel="stylesheet">
+	<script src="https://use.typekit.net/nvn6ujv.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<!-- // THIS IS SLICK via CDN -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/slick//slick-theme.css"/>
+
+	<link rel="stylesheet" href="https://i.icomoon.io/public/a2e1a8bb34/DB3/style.css">
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
+
+	
+	
+	<!-- SWITCH H&FJ TO PRODUCTION BEFORE LAUNCH -->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+  </head>
+
+  <body class="map">
+
+<main class="site-content" role="main">	 
+
+
+
+
+<div id='map' style='width: 100%; height: 100vh;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic21hcnRhc3NkZXNpZ24iLCJhIjoiY2ltcHBhMm5jMDA2NXdibHVrZzI3YTdpciJ9.GVLfDKnH2xdGYlwsz6hWlw';
+  var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/smartassdesign/cinkw23el0001c1nh9l5k47aj'
+  });
+</script>
+
+
+
+<div class="map-box-box">
+		
+	<h2>What's here</h2>
+
+
+	<ol class="map-listings">
+
+		<li><a href="#"><span class="address">50 Hoyt Street</span>3 in 1 Deli</a></li>
+
+		<li><a href="#"><span class="address">255 Livingston Street</span>99 Cent Pizza</a></li>
+
+		<li><a href="#"><span class="address">189 Bridge Street</span>Amarachi</a></li>
+
+		<li><a href="#"><span class="address">30 Nevins Street</span>Angelica Pizzeria and Restaurant</a></li>
+
+		<li><a href="#"><span class="address">395 Flatbush Avenue Extension</span>Applebee's</a></li>
+
+		<li><a href="#"><span class="address">1 MetroTech Center North</span>Au Bon Pain</a></li>	
+		<li><a href="#"><span class="address">100 Willoughby Street</span>AVA Brew</a></li>		
+
+		<li><a href="#"><span class="address">193 Schermerhorn Street</span>Bed Stuy Fish Fry</a></li>			
+
+	</ol> <!-- /.map-listings -->
+
+
+</div> <!-- /.map-box-box -->
+
+	
+</main> <!-- /.site-content -->
+
+
+<!-- Modal -->
+<div class="modal" id="modalRevel" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="vertical-alignment-helper">
+  <div class="modal-dialog modal-lg vertical-align-center">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+		<h4 class="modal-title">Revelry Details</h4>
+	  </div> <!-- /.modal-header-->      
+	  <div class="modal-body text-sm-center">
+	  	<h3>Welcome Gathering</h3>
+	  	<p>Friday, May 20, time TBD</p>
+	  	<h3>Nuptial Commencement</h3>
+	  	<p>Saturday, May 21, 4pm</p>
+	  	<h3>After party</h3>
+	  	<p>TBD</p>
+		<p>Transportation will be provided from hotels to events.<br>
+		<em>More revelry coming soon!</em></p>
+		</div> <!-- /.modal-body-->
+	  </div> <!-- /.modal-content -->
+	</div> <!-- ./modal-dialog -->
+	</div> <!-- ./modal-vertical-align-center -->
+  </div> <!-- ./modal -->
+
+
+
+
+
+
+	<!-- And some JavaScript
+	================================================== -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="assets/js/bootstrap-min.js"></script>
+		<script src="assets/js/app-min.js"></script>		
+
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<!-- 		<script>
+			$(".home .site-content").backstretch("assets/img/temp-thing.jpg");
+		</script> -->
+  
+	</body>
+</html> 
+
+

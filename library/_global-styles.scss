@@ -92,6 +92,18 @@ a, .btn {
 
 
 
+%texture-bg {
+	background: url("../img/temp-concrete.jpg") repeat;	
+}
+
+
+.cbg {
+	@extend %texture-bg;
+}
+
+
+
+
 
 
 // THE MODULES

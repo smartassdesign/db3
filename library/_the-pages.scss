@@ -2,7 +2,8 @@
 
 .home {
 	color: #fff;
-	background: #333;
+	// background: #333;
+	@extend %texture-bg;
 }
 
 
