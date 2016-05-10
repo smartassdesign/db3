@@ -23,7 +23,9 @@
 
 }
 
-
+.home .bg-inverse {
+	background: $black;
+}
 
 .home-2 {
 	.navwrapper {
@@ -52,7 +54,7 @@
 
 #nav-2 {
 	
-	position: relative;
+	position: absolute;
 	top: 35px;
 	z-index: 9;
 	width: 100%;

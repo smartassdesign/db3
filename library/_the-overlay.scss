@@ -5,7 +5,8 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(153,204,51,0.9);
+	background: rgba(0,178,217,0.93);
+	// background: rgba(153,204,51,0.9);
 }
 
 /* Overlay closing cross */
@@ -44,10 +45,39 @@
 	position: relative;
 }
 
-.overlay ul li {
+
+
+.overlay ul.secondary-nav {
+	// height: auto!important;
+	height: calc(100% / 6);
+}
+
+.overlay ul.secondary-nav li {
+	display: inline-block!important;
+	font-size: 24px;
+	text-transform: uppercase;
+	// height: auto;
+	// min-height: 20px;
+}
+
+.overlay ul.tertiary-nav {
 	display: block;
-	height: 20%;
-	height: calc(100% / 5);
+	height: auto!important;
+}
+
+.overlay ul.tertiary-nav li {
+	display: inline-block!important;
+	// height: auto!important;
+	// min-height: 20px!important;	
+
+}
+
+
+
+.overlay ul.huge-nav li {
+	display: block;
+	// height: 20%;
+	height: calc(100% / 6);
 	min-height: 54px;
 }
 
@@ -61,7 +91,8 @@
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-	color: #e3fcb1;
+	color: $black;
+	// color: #e3fcb1;
 }
 
 /* Effects */

@@ -126,7 +126,61 @@ nav.navbar {
 
 
 
+#collapseOne {
 
+	.innercollapse {
+		padding: 3rem;
+	}
+
+	ul.huge-nav li a {
+		font-size: 72px;
+		font-weight: 300;
+		color: $gray-lighter;
+		transition: .3s all;
+
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	ul.secondary-nav li a {
+		font-weight: 300;
+		color: $gray-lighter;
+		transition: .3s all;
+		font-size: 22px;
+		text-transform: uppercase;
+			
+			&:hover {
+				color: $blue;
+			}		
+	}
+
+	.list-inline-item:not(:last-child) {
+		margin-right: 12px;
+	}
+
+
+
+	ul.tertiary-nav {
+		border-top: 1px solid rgba(236,238,239,0.3); //$gray-lighter;
+		margin-top: 30px;
+		padding-top: 30px; 
+		
+		li a {
+			color: $gray-lightest;
+
+			&:hover {
+				color: $blue;
+			}	
+
+		}
+
+	}
+
+
+
+
+}
 
 
 
@@ -155,10 +209,14 @@ nav.navbar {
 }
 
 #collapseOne.collapse.in, #collapseOne.collapsing.in {
-	height: 70vh;
+	height: 77vh;
 	padding: 0;
 	margin: 0;	
-	@extend %texture-bg;
+	position: absolute;
+	background: #444;
+	bottom: 0;
+	width: 100%;
+	// @extend %texture-bg;
 }
 
 .no-transition {
