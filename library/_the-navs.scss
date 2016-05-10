@@ -18,6 +18,7 @@ nav.navbar {
 		color: #fff;
 		text-transform: uppercase;
 		line-height: 70px;
+		transition: ease .2s;
 	}	
 
 	a.navbar-brand {
@@ -28,13 +29,144 @@ nav.navbar {
 		left: 30px;
 		top: -32px;
 		background-image: url("../img/db-logo-10.png");
+		transform: scale(1.0);
+		transition: ease .2s;
 	}
 
 
 	&.bg-inverse {
-		background-color: $black;
 		color: $white;
 	}
 
 
 }
+
+
+// FOR SHRINKING NAV
+
+
+// #nav-container {
+// 	max-width: inherit;
+// 	width: 100%;
+// 	position: relative;	
+
+// 		&:after {
+// 			content: "";
+// 			position: absolute;
+// 			width: 100%;
+// 			bottom: 0;
+// 			height: 15px;
+// 			margin-bottom: -15px;
+// 			z-index: 4999999;
+// 			left: 0;	
+// 			background: linear-gradient(rgba(0,0,0,.2),transparent);		
+// 		}
+// }
+
+
+	.sps {
+		position: fixed!important;
+		top: 100px;
+		width: 100%;
+		transition: all 0.25s ease;
+	}
+
+	nav.navbar.sps--abv {
+		background-color: $black;
+		color: $black;	
+
+
+			.nav-social-list {
+				display: none;
+			}		
+
+	}
+
+	nav.navbar.sps--blw {
+		background-color: $black;
+		// background-color: rgba(68,68,68,0.97);
+		color: $white;
+		z-index: 10;			
+		top: 0;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			height: 15px;
+			margin-bottom: -15px;
+			z-index: 4999999;
+			left: 0;	
+			background: linear-gradient(rgba(0,0,0,.23),transparent);		
+		}		
+
+
+			a.navbar-brand {
+				transform: scale(.5);
+			}
+
+			a.nav-link {
+				font-size: 18px;
+				color: #fff;
+				line-height: 50px;
+			}	
+
+			.nav-social-list {
+				display: inline-block;
+				margin-right: 30px;
+			}
+
+			.nav-nav-item {
+				display: none;
+			}
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.highlight-roll {
+	margin-top: 70px;
+}    
+
+
+#accordion {
+	position: absolute;
+	width: 100%;
+	bottom: -70px;
+	margin: 0	
+}
+
+.navwrapper {
+	position: relative;
+	// background: salmon;
+	// height: 800px;	
+}
+
+#collapseOne.collapse.in, #collapseOne.collapsing.in {
+	height: 70vh;
+	padding: 0;
+	margin: 0;	
+	@extend %texture-bg;
+}
+
+.no-transition {
+  // transition: height 0.001s;
+  transition: height 0.0001s;
+}
+
+
+
+
+

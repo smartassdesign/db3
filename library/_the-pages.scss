@@ -1,10 +1,91 @@
 
 
-.home {
+.home, .home-2 {
 	color: #fff;
 	// background: #333;
 	@extend %texture-bg;
 }
+
+
+
+.home, .home-2 {
+
+	.article-teaser {
+		height: calc(24vh - 70px);
+		margin: 3vh 0;
+	}
+
+	footer {
+		display: none;
+	}
+
+
+
+}
+
+
+
+.home-2 {
+	.navwrapper {
+		position: absolute;
+		top: 35px;
+		left: 0;
+		width: 100%;
+		z-index: 9
+	}
+
+	.outer-nav .primary-nav li a {
+		font-size: 36px;
+	}
+
+	.outer-nav .secondary-nav li a {
+		font-size: 20px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 500;
+	}
+	
+
+}
+
+
+
+#nav-2 {
+	
+	position: relative;
+	top: 35px;
+	z-index: 9;
+	width: 100%;
+}
+
+
+
+
+
+
+
+// THE POST
+
+
+
+.post {
+
+	@extend %texture-bg;
+
+	article.single-card {
+		margin-top: 250px!important;
+	}
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
