@@ -7,11 +7,17 @@
 }
 
 
+.home .article-teaser {
+	height: calc(24vh - 70px);
+}
+
+.home-2 .article-teaser {
+	height: 24vh;
+}
 
 .home, .home-2 {
 
 	.article-teaser {
-		height: calc(24vh - 70px);
 		margin: 3vh 0;
 	}
 
@@ -47,6 +53,9 @@
 		font-weight: 500;
 	}
 	
+	.highlight-roll {
+		margin-top: 0;
+	}
 
 }
 
