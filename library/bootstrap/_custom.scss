@@ -27,6 +27,7 @@
 // Grayscale and brand colors for use across Bootstrap.
 
 $gray-dark:                 #373a3c !default;
+// $gray:                      #2b2a28; // #55595c !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
@@ -43,6 +44,9 @@ $yellow:                    $brand-success;
 $orange:                    $brand-warning;  
 $blue:                      #00b2d9;
 $green:                     $brand-success;
+$dbdark:                    #2b2a28;
+$dblight:                    #888;
+$db-dark:                   $dbdark;
 
 
 $black:                     #000;

@@ -1,3 +1,17 @@
+
+#nav-2 {
+	position: absolute;
+	// position: fixed;
+	top: 35px;
+	z-index: 19;
+	width: 100%;
+}
+
+
+
+
+
+
 nav.navbar {
 
 	padding: 0;
@@ -80,6 +94,10 @@ nav.navbar {
 				display: none;
 			}		
 
+			.title-repeat {
+				display: none;
+			}
+
 	}
 
 	nav.navbar.sps--blw {
@@ -119,6 +137,21 @@ nav.navbar {
 			.nav-nav-item {
 				display: none;
 			}
+
+			.title-repeat {
+				position: absolute;
+    			display: inline;
+				left: 158px;
+
+				h4 {
+					font-size: 13px;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					color: $white;
+					margin-bottom: 0;
+					line-height: 50px;
+				}
+			}	
 
 
 	}
