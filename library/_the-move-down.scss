@@ -148,8 +148,8 @@ html, body, .perspective {
 
 /* Effect Move Down */
 .effect-movedown {
-	 // background: #444;
-	background: #34495e;
+	 background: #333;
+	// background: #34495e;
 }
 
 .effect-movedown .maintainer {
@@ -159,7 +159,7 @@ html, body, .perspective {
 	&:hover {
 		&:after {
 			background: rgba(0,0,0, 0.33);	
-			// transition: all .4s;
+			// 
 		}
 	}
 }
