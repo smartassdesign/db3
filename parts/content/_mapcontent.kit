@@ -1,19 +1,116 @@
 
 
 
+<style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+    .marker-title {
+        font-weight: 700;
+    }
+</style>
+
 
 <div id='map' style='width: 100%; height: 100vh;'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic21hcnRhc3NkZXNpZ24iLCJhIjoiY2ltcHBhMm5jMDA2NXdibHVrZzI3YTdpciJ9.GVLfDKnH2xdGYlwsz6hWlw';
   var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/smartassdesign/cinkw23el0001c1nh9l5k47aj'
+      style: 'mapbox://styles/smartassdesign/cipef8rfc0023b0nrl6piuvpu',
+      zoom: 15.00,
+      bearing: 30,
+      pitch: 55,
+      center: [-73.98567932954508, 40.693490924254206]
   });
+
+map.on('load', function () {
+    map.addSource("markers", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9777, 40.6865]
+                },
+                "properties": {
+                    "title": "BAM Peter Jay Sharp Building",
+                    "marker-symbol": "theatre"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.985, 40.704]
+                },
+                "properties": {
+                    "title": "26 Bridge",
+                    "description": "<div class=\"marker-title\">26 Bridge</div><p>The renovations to this former metal factory highlight the building's industrial past, accentuating the original brick walls, large wooden doors, and magnificent high ceiling with a skylight. It seats about 250 people or holds 375 for standing receptions and is the perfect space for private events, weddings, Bar Mitzvahs, fashion shows, corporate events, and more.</p>",
+                    "marker-symbol": "harbor"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9744, 40.6853]
+                },
+                "properties": {
+                    "title": "MoCADA",
+                    "marker-symbol": "harbor"
+                }
+            }]
+        }
+    });
+
+    map.addLayer({
+        "id": "markers",
+        "type": "symbol",
+        "source": "markers",
+        "layout": {
+            "icon-image": "{marker-symbol}-15",
+            "text-field": "{title}",
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+        }
+    });
+});
+
+
+// When a click event occurs near a marker icon, open a popup at the location of
+// the feature, with description HTML from its properties.
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['markers'] });
+
+    if (!features.length) {
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+
+// Use the same approach as above to indicate that the symbols are clickable
+// by changing the cursor style to 'pointer'.
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['markers'] });
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+});
+
 </script>
 
 
 
-<div class="map-box-box">
+<div class="map-box-box" style="display: none;">
 		
 	<h2>What's here</h2>
 
