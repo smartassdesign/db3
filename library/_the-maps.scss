@@ -1,6 +1,6 @@
 
 .page-mapbox {
-   // background: red;
+   // background: blue;
    // @extend .bcb;
 
    .mapboxholster {
@@ -20,17 +20,39 @@
 
 }
 
+.mapboxgl-popup {
+	font-family: $font-family-sans-serif!important;
+}
+
 .mapboxgl-popup-content {
    width: 300px;
    position: relative;
    height: 290px;
    background: #fff;
-   border-bottom: 3px solid $red;
+   // background: #2b2a28!important;
+   border-bottom: 3px solid $blue;
    padding: 20px;
+   overflow-y: scroll;
+
+
+   p {
+		font-size: 16px;
+   		color: #888
+   }
+}
+
+
+.mapboxgl-map .marker-title {
+	text-transform: uppercase;
+	font-size: 23px;
+	font-weight: 600!important;
+	font-style: normal!important;
+	// color: $white;
+	margin-bottom: 10px;
 }
 
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
-   background: $red;
+   background: $blue;
    display: inline-block;
    height: 20px;
    margin-left: 0;
@@ -38,10 +60,10 @@
    position: relative;
    width: 18px;
    border-bottom: 0;
-   border-top-color: $red;
+   border-top-color: $blue;
 
    &:before {
-	  border-top: 15px solid $red;
+	  border-top: 15px solid $blue;
 		  border-left: 10px solid transparent;
 		  border-right: 10px solid transparent;
 		  content: "";
@@ -53,15 +75,20 @@
    }
 
    &:after {
-	  content: "\e9d9";
+	  content: "\e901";
 	  font-family: 'icomoon';
 	  text-align: center;
 	  font-size: 15px;
 	  position: absolute;
 	  left: -7px;
 	  bottom: -3px;
-	  color: $black;
+	  color: $white;
    }
+}
+
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+	border-top-color: transparent!important;
 }
 
 // .mapboxgl-popup-tip {
@@ -145,7 +172,8 @@
 	ol li a {
 		font-size: 24px;
 		margin: 10px 0;
-		display: block;
+		display: block; 
+			
 	}
 
 

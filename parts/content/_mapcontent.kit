@@ -1,19 +1,265 @@
 
 
 
+<style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+    .marker-title {
+        font-weight: 700;
+    }
+</style>
+
 
 <div id='map' style='width: 100%; height: 100vh;'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic21hcnRhc3NkZXNpZ24iLCJhIjoiY2ltcHBhMm5jMDA2NXdibHVrZzI3YTdpciJ9.GVLfDKnH2xdGYlwsz6hWlw';
   var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/smartassdesign/cinkw23el0001c1nh9l5k47aj'
+      style: 'mapbox://styles/smartassdesign/cipfra7830009bjnr80mjdx8z',
+      zoom: 15.00,
+      bearing: 30,
+      pitch: 55,
+      center: [-73.98567932954508, 40.693490924254206]
   });
+
+map.on('load', function () {
+    map.addSource("markers", {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": [
+{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9773, 40.6861]
+                },
+                "properties": {
+                    // "title": "Brooklyn Music School",
+                    "description": "<div class=\"marker-title\">Brooklyn Music School</div><p>The Brooklyn Music School is a community school for the performing arts, founded in 1912 as the Brooklyn Music School Settlement. It owns and operates a historic four-story building in Fort Greene that contains twenty-four classrooms, three dance studios, and a professional 266-seat  Spanish Style theater. The Brooklyn Music School is a long-standing member of the National Guild of Community Schools of the Arts.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9924, 40.6948]
+                },
+                "properties": {
+                    // "title": "Brooklyn Historical Society",
+                    "description": "<div class=\"marker-title\">Brooklyn Historical Society</div><p>Brooklyn Historical Society (BHS) connects the past to the present and makes the vibrant history of Brooklyn tangible, relevant, and meaningful for today's diverse communities, and for generations to come. Founded in 1863, BHS is a nationally recognized urban history center dedicated to preserving and encouraging the study of Brooklyn's extraordinary 400-year history.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9874, 40.6892]
+                },
+                "properties": {
+                    // "title": "Brooklyn Ballet",
+                    "description": "<div class=\"marker-title\">Brooklyn Ballet</div><p>Brooklyn Ballet is a professional, not-for-profit dance company dedicated to artistic excellence, education, and serving Brooklyn’s diverse communities. The company was founded in February 2002 by Artistic Director Lynn Parkerson, the first of its kind in Brooklyn in more than 40 years. Brooklyn Ballet brings a contemporary vision to the treasured art form of ballet, with repertory and programs that revitalize and re-imagine the classical form. The Company unveiled the new multi-use performance venue in The Schermerhorn with its \"First Look\" series in May 2010 and debuted \"From Baroque to Hip Hop\" in March 2011.</p>",
+                    "marker-symbol": "marker"
+                } 
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9791, 40.6886]
+                },
+                "properties": {
+                    // "title": "BRIC House",
+                    "description": "<div class=\"marker-title\">BRIC House</div><p>BRIC provides a platform for the development of new works in theater, dance, music, and multi-disciplinary performance; as well as subsidized rehearsal, rental, and performance space for non venue-based artists and arts organizations.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, 
+ {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9752, 40.6831]
+                },
+                "properties": {
+                    // "title": "Barclays Center",
+                    "description": "<div class=\"marker-title\">Barclays Center</div><p>Barclays Center showcases the best in sports and entertainment right in the heart of the borough. Barclays Center serves as the home of the NBA's Brooklyn Nets, the future home of the NHL's New York Islanders, and can accommodate up to 19,000 visitors for musical performances. Easily accessible by multiple subway lines and the Long Island Railroad, Barclays Center is located at the intersection of Atlantic Avenue and Flatbush Avenue.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, 
+ {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9777, 40.6865]
+                },
+                "properties": {
+                    // "title": "BAM Rose Cinemas",
+                    "description": "<div class=\"marker-title\">BAM Rose Cinemas</div><p>Originally a music hall, then converted to a playhouse, the venue was transformed into BAM Rose Cinemas in 1998, restoring the playhouse's elegant proscenium and preserving the history of the space while providing a state-of-the-art viewing experience in each of its four cinemas.</p>",
+                    "marker-symbol": "marker"
+                }
+            },                         
+{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9778, 40.686]
+                },
+                "properties": {
+                    // "title": "BAM Richard B. Fisher Building",
+                    "description": "<div class=\"marker-title\">BAM Richard B. Fisher Building</div><p>BAM has grown into a thriving urban arts center that brings international performing arts and film to Brooklyn. BAM's current programming consists of the Next Wave Festival each fall; a spring season of international opera, theater, and dance; a comprehensive Education & Humanities program, and a variety of community programs. BAM's newest venue - The BAM Richard B. Fisher Building - houses the Fishman Space, BAM Fisher HIllman Studio, BAM Fisher Rooftop Terrace and Stutz Gardens, and Leavitt Workshop.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, 
+ {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9777, 40.6865]
+                },
+                "properties": {
+                    // "title": "BAM Peter Jay Sharp Building",
+                    "description": "<div class=\"marker-title\">BAM Peter Jay Sharp Building</div><p>BAM has grown into a thriving urban arts center that brings international performing arts and film to Brooklyn. BAM's current programming consists of the Next Wave Festival each fall; a spring season of international opera, theater, and dance; a comprehensive Education & Humanities program, and a variety of community programs. The Peter Jay Sharp Building houses the BAM Rose Cinemas, the Howard Gilman Opera House, and the Lepercq Space/BAMcafé.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.979, 40.6883]
+                },
+                "properties": {
+                    // "title": "BAM Harvey Theater",
+                    "description": "<div class=\"marker-title\">BAM Harvey Theater</div><p>BAM has grown into a thriving urban arts center that brings international performing arts and film to Brooklyn. BAM's current programming consists of the Next Wave Festival each fall; a spring season of international opera, theater, and dance; a comprehensive Education & Humanities program, and a variety of community programs. The BAM Harvey Theater, originally the Majestic Theater, was renamed in 1999 in honor of retiring BAM president Harvey Lichtenstein.</p>",
+                    "marker-symbol": "marker"
+                }
+            },                                                
+
+
+
+ {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9882, 40.6898]
+                },
+                "properties": {
+                    // "title": "Actors Fund Arts Center",
+                    "description": "<div class=\"marker-title\">Actors Fund Arts Center</div><p>The Actors Fund Arts Center is a state-of-the-art black box performance venue and rehearsal space located in the lobby level of The Schermerhorn in Downtown Brooklyn. The venue is operated by The Actors Fund, a national human services organization that helps professionals in performing arts and entertainment in times of need, crisis, or transition.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9736, 40.6851]
+                },
+                "properties": {
+                    // "title": "A.R.T.NY South Oxford Space",
+                    "description": "<div class=\"marker-title\">A.R.T.NY South Oxford Space</div><p>The Alliance of Resident Theatres is the service and advocacy organization for the nation’s largest, most artistically influential and culturally diverse theater community: Off Broadway. Founded in 1972, it serves nearly 400 not-for-profit theaters throughout the city. Originally the home of the Visiting Nurse Service of NY, the South Oxford Space now offers affordable office, rehearsal, and performance space to 21 local non-profit performing arts organizations.</p>",
+                    "marker-symbol": "marker"
+                }
+            },                                                 
+
+
+
+ {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9745, 40.6854]
+                },
+                "properties": {
+                    // "title": "80 Arts",
+                    "description": "<div class=\"marker-title\">80 Arts</div><p>Located at the corner of Hanson Place and South Portland Avenue, 80 Arts - James E. Davis Arts Building is a 30,000-square-foot building transformed into an affordable office space with shared amenities for local nonprofit arts groups. With offices that range in size from 400 to 3,000 square feet, the building includes a lunch room, conference rooms, rehearsal space, and a landscaped garden.</p>",
+                    "marker-symbol": "marker"
+                }
+            },                                                 
+{
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.979, 40.6883]
+                },
+                "properties": {
+                    // "title": "651 ARTS",
+                    "description": "<div class=\"marker-title\">651 ARTS</div><p>It is the mission of 651 ARTS to deepen awareness of and appreciation for contemporary performing arts and culture of the African Diaspora, and to provide professional and creative opportunities for performing artists of African descent. 651 ARTS presents live dance, music, and theater events in venues throughout Brooklyn, and maintains a robust educational program that provides unique opportunities for youth in public schools to engage with professional artists from around the globe.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, 
+
+             {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.985, 40.704]
+                },
+                "properties": {
+                    // "title": "26 Bridge",
+                    "description": "<div class=\"marker-title\">26 Bridge</div><p>The renovations to this former metal factory highlight the building's industrial past, accentuating the original brick walls, large wooden doors, and magnificent high ceiling with a skylight. It seats about 250 people or holds 375 for standing receptions and is the perfect space for private events, weddings, Bar Mitzvahs, fashion shows, corporate events, and more.</p>",
+                    "marker-symbol": "marker"
+                }
+            }, {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-73.9744, 40.6853]
+                },
+                "properties": {
+                    // "title": "MoCADA",
+                    "marker-symbol": "marker"
+                }
+            }]
+        }
+    });
+
+    map.addLayer({
+        "id": "markers",
+        "type": "symbol",
+        "source": "markers",
+        "layout": {
+            "icon-image": "{marker-symbol}-15",
+            "text-field": "{title}",
+            "text-font": ["Klavika Medium", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+        }
+    });
+});
+
+
+// When a click event occurs near a marker icon, open a popup at the location of
+// the feature, with description HTML from its properties.
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['markers'] });
+
+    if (features.length) {
+         map.flyTo({center: features[0].geometry.coordinates});
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+
+// Use the same approach as above to indicate that the symbols are clickable
+// by changing the cursor style to 'pointer'.
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['markers'] });
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+});
+
 </script>
 
 
 
-<div class="map-box-box">
+<div class="map-box-box" style="display: none;">
 		
 	<h2>What's here</h2>
 
